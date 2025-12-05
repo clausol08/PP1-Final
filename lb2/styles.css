@@ -1,0 +1,178 @@
+/*VARIABLES*/
+:root {
+    --primary-pink: #d4869b;
+    --soft-pink: #fce7f3;
+    --dark-text: #333;
+}
+
+/*CONFIGURACION GENERAL*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf2f8;
+    /*Fondo de flores*/
+    background-image: url(imagenes/flor\ de\ cerezo.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Fuentes personalizadas*/
+
+h1, h2, h3, .brand-font {
+    font-family: 'Playfair Display' serif;
+}
+
+/*Efecto cristal para que el texto se lea sobre las flores*/
+.glass-panel {
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/*Marquesina animada*/
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--primary-pink);
+    color: white;
+    padding: 8px 0;
+    position: relative;
+    z-index: 50;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0);}
+    100% {transform: translate(-100%, 0);}
+}
+
+/*Navegacion*/
+.nav-link {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #db2777;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ec4899;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/*Carrusel*/
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.carousel-item{
+    display: none;
+    width: 100%;
+    height: 100%;
+    animation: fadeEffect 1s;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+/*Boton flotante de whatsapp*/
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/*Animaciones de entrada*/
+main {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/*Animacion de respiracion (zoom lento)*/
+@keyframes backgroundBreathe {
+    0% {
+        background-size: 110% auto; 
+        background-position: center bottom;
+    }
+    50% {
+        background-size: 120% auto;
+        background-position: center bottom;
+    }
+    100% {
+        background-size: 110% auto;
+        background-position: center bottom;
+    }
+}
+
+/*Aplicacion de imagen y animacion al contenedor de formulario*/
+#contacto-container {
+    position: relative;
+    overflow: hidden;
+
+    /*Animacion*/
+   /* animation: backgroundBreathe 20s ease-in-out infinite;*/
+}
+
+/*Ajuste para moviles para que la luna se vea mejor*/
+/*@media(max-width: 768px) {
+    #contacto-container {
+        background-size: cover; /*en moviles forzamos cubrir*/
+      /*  background-position: center center;
+       /* animation: none;  /*Desactivamos animacion en moviles viejos por rendimiento*/
+ /*   }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Laksmi Beauty</title>
+     <!--Carga de Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&@display=swap" rel="stylesheet">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <!--css externo-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" type="jpg" href="image/logo.jpeg">
+</head>
+<body>
+
+    <!--Marquesina (parte superior)-->
+    <div class="marquee-container shadow-md">
+        <div class="marquee-content font-bold uppercase tracking-wider text-sm md:text-base">
+            ✨ INSCRIPCIONES ABIERTAS- TU FUTURO COMIENZA HOY - CURSOS PROFESIONALES - INSUMOS DE CALIDAD - LAKSMI BEAUTY ✨ INSCRIPCIONES ABIERTAS - TU FUTURO COMIENZA HOY ✨
+        </div>
+    </div>
+
+    <!--Encabezado (Header)-->
+    <header class="bg:white/95 backdrop-blur-md shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 text-decoration-none">
+                <img src="imagenes/logo.jpeg" alt="Laksmi Beauty Logo" class="h-12 w-12 rounded-full object-cover border-2 border-pink-400">
+                <span class="brand-font text-2xl font-bold text-gray-800 hidden sm:block">Instituto Laksmi Beauty</span>
+            </a>
+
+            <!--Menu escritorio-->
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="curso.html" class="nav-link">Cursos</a>
+                <a href="tienda.html" class="nav-link">Tienda</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+
+            <!--Boton movil-->
+                
+            <button class="md:hidden text-gray-700 text-2xl" onclick="toogleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!--Menu movil-->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 flex flex-col gap-4 text-center shadow-lg">
+            <a href="index.html" class="block py-2 text-pink-600 font-bold">Inicio</a>
+            <a href="curso.html" class="block py-2 text-gray-600 hover:text-pink-600">Cursos</a>
+            <a href="tienda.html" class="block py-2 text-gray-600 hover:text-pink-600">Tienda</a>
+            <a href="servicios.html" class="block py-2 text-gray-600 hover:text-pink-600">Servicios</a>
+            <a href="contacto.html" class="block py-2 text-gray-600 hover:text-pink-600">Contacto</a>
+        </div>
+    </header>
+    
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="glass-panel p-8 max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl text-pink-800 font-bold mb-4">Servicios de Gabinete</h2>
+                <p class="text-gray-600">Dejate consentir por nuestras expertas. Atenion con turno previo.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!--Servicios de Pestañas-->
+                <div class="flex flex-col md:flex-row items-center border-b border-gray-200 pb-6 hover:bg-white/40 p-4 rounded transition">
+                    <div class="w-full md:w-1/3 mb-4 md:mb-0">
+                        <img src="imagenes/sp.jpg" class="w-full h-48 object-cover rounded-lg shadow-sm" alt="Servicio Pestañas">
+                    </div>
+                    <div class="w-full md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800">Extension de Pestañas</h3>
+                        <p class="text-gray-600 mt-2">Realzamos tu mirada con tecnicas clasicas, hibridas o volumen ruso.
+                            Utilizamos adhesivos y fibras de primera calidad para cuidar tu pestaña natural.
+                        </p>
+                        <a href="contacto.html" class="inline-block mt-4 text-pink-600 font-bold hover:underline">Reservar Turno &rarr;</a>
+                    </div>
+                </div>
+
+                <!--Servicio de Cejas-->
+                 <div class="flex flex-col md:flex-row items-center border-b border-gray-200 pb-6 hover:bg-white/40 p-4 rounded transition">
+                    <div class="w-full md:w-1/3 mb-4 md:mb-0">
+                        <img src="imagenes/sc.jpg" class="w-full h-48 object-cover rounded-lg shadow-sm" alt="Servicio Cejas">
+                    </div>
+                    <div class="w-full md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800">Perfilado y Lminado de Cejas</h3>
+                        <p class="text-gray-600 mt-2">Diseño personalizado segun la morfologia de tu rostro. Incluye depilacion , perfilado y nutricion del vello para un look implecable.</p>
+                        <a href="contacto.html" class="inline-block mt-4 text-pink-600 font-bold hover:underline">Reservar Turno &rarr;</a>
+                    </div>
+                </div>
+
+                <!--Servicio de Manicuria-->
+                 <div class="flex flex-col md:flex-row items-center border-b border-gray-200 pb-6 hover:bg-white/40 p-4 rounded transition">
+                    <div class="w-full md:w-1/3 mb-4 md:mb-0">
+                        <img src="imagenes/smanicuria.jpg" class="w-full h-48 object-cover rounded-lg shadow-sm" alt="Servicio Manicuria">
+                    </div>
+                    <div class="w-full md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800">Manicuria</h3>
+                        <p class="text-gray-600 mt-2">Manicuria completa con esmaltado semipermanente, construccion soft gel y diseño personalizado.</p>
+                        <a href="contacto.html" class="inline-block mt-4 text-pink-600 font-bold hover:underline">Reservar Turno &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white pt-10 pb-4 mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="brand-font text-2xl font-bold text-pink-400 mb-4">Laksmi Beauty</h3>
+                <p class="text-gray-400 text-sm">Instituto de Belleza y Distribuidor Oficial.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Menu</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="index.html" class="hover:text-pink-400">Inicio</a></li>
+                    <li><a href="curso.html" class="hover:text-pink-400">Cursos</a></li>
+                    <li><a href="tienda.html" class="hover:text-pink-400">Tienda</a></li>
+                    <li><a href="contacto.html" class="hover:text-pink-400">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Siguenos</h4>
+                <div class="flex flex-row justify-center md:justify-start gap-4">
+                    <a href="https://instagram.com/lbinstituto?igsh=MWU4NWNoc3k2bG80YQ==" target="_blank" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fa-brands fa-instagram"></i></a><br>
+                    <a href="https://www.facebook.com/Julizyani" target="_blank" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                     <a href="https://www.tiktok.com/@lbnstituto?_r=1&_t=ZM-91xZmOSj7jn" target="_blank" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-black-600 transition"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-4 text-center text-gray-500 text-xs">
+            <p class="text-gray-500 text-xs">&copy; 2025 Laksmi Beauty. Todos los derechos reservados.</p>
+        </div> 
+    </footer>
+    <a href="https://wa.me/5492617467435" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+
+    <script>
+         //togglemenu
+        function toogleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            } else {
+                console.error("¡Cuidado! no encontre el menu con id='mobile-menu'");
+            }
+        }
+    </script>
+</body>
+</html>
